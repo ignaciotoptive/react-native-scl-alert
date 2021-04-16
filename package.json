@@ -30,7 +30,7 @@
     "jest-serializer-enzyme": "^1.0.0",
     "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",
-    "react": "16.14.0",
+    "react": "17.0.2",
     "react-dom": "^16.2.0",
     "react-native": "^0.64.0",
     "react-native-scripts": "2.0.1",
