@@ -16,7 +16,7 @@ SCLAlertSubtitle.defaultProps = {
 function SCLAlertSubtitle(props) {
   return (
     <View style={[styles.container, props.subtitleContainerStyle]}>
-      <Text numberOfLines={2} style={[styles.subtitle, props.subtitleStyle]}>
+      <Text style={[styles.subtitle, props.subtitleStyle]}>
         {props.subtitle}
       </Text>
     </View>
