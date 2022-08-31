@@ -25,7 +25,8 @@ class SCLAlert extends React.Component {
     show: false,
     cancellable: true,
     slideAnimationDuration: 250,
-    overlayStyle: {}
+    overlayStyle: {},
+    innerContentStyle: {}
   }
 
   state = {
@@ -117,7 +118,7 @@ class SCLAlert extends React.Component {
             style={[styles.contentContainer, { transform: this.interpolationTranslate }]}
           >
             <SCLAlertHeader {...this.props} />
-            <View style={styles.innerContent}>
+            <View style={[styles.innerContent, this.props.innerContentStyle]}>
               <SCLAlertTitle {...this.props} />
               <SCLAlertSubtitle {...this.props} />
               <View style={styles.bodyContainer}>{this.props.children}</View>

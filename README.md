@@ -118,6 +118,7 @@ You can customized the look and feel of this library the way you want, but, if y
 | cancellable | PropTypes.bool | true | If user press in the overlay, will trigger onRequestClose func|
 | onRequestClose | PropTypes.func | null | Trigger a function asking to close the alert |
 | slideAnimationDuration | PropTypes.number | 250 | Duration in ms of the alert animation |
+| innerContentStyle | ViewPropTypes.style | {} | Extends the main content view style |
 | overlayStyle | ViewPropTypes.style | {} | Extends the overlay view style |
 | title | PropTypes.string | REQUIRED | A string to render in the modal title |
 | titleContainerStyle | ViewPropTypes.style | {} | Extends the title container view style |
