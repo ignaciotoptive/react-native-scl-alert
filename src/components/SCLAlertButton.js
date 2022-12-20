@@ -4,13 +4,6 @@ import { View,  StyleSheet, Text, TouchableOpacity } from 'react-native'
 import variables from '../config/variables'
 import { themeType, defaultThemeType } from '../config/types'
 
-SCLAlertButton.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
-  textStyle: Text.propTypes.style,
-  theme: themeType,
-  onPress: PropTypes.func.isRequired
-}
-
 SCLAlertButton.defaultProps = {
   containerStyle: {},
   textStyle: {},

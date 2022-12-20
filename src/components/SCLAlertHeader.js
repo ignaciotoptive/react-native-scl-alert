@@ -5,11 +5,6 @@ import images from '../config/images'
 import variables from '../config/variables'
 import { themeType, defaultThemeType } from '../config/types'
 
-SCLAlertHeader.propTypes = {
-  theme: themeType,
-  headerIconComponent: PropTypes.node
-}
-
 SCLAlertHeader.defaultProps = {
   headerContainerStyles: {},
   headerInnerStyles: {},

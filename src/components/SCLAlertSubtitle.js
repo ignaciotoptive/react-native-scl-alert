@@ -3,11 +3,6 @@ import PropTypes from 'prop-types'
 import { View,  StyleSheet, Text } from 'react-native'
 import variables from '../config/variables'
 
-SCLAlertSubtitle.propTypes = {
-  subtitle: PropTypes.string.isRequired,
-  subtitleStyle: Text.propTypes.style
-}
-
 SCLAlertSubtitle.defaultProps = {
   subtitleContainerStyle: {},
   subtitleStyle: {}
