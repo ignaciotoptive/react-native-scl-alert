@@ -5,27 +5,21 @@ import images from '../config/images'
 import variables from '../config/variables'
 import { themeType, defaultThemeType } from '../config/types'
 
-SCLAlertHeader.defaultProps = {
-  headerContainerStyles: {},
-  headerInnerStyles: {},
-  theme: defaultThemeType,
-  headerIconComponent: null
-}
 
-function SCLAlertHeader(props) {
+function SCLAlertHeader({ headerContainerStyles = {}, headerInnerStyles = {}, theme = defaultThemeType, headerIconComponent = null }) {
   return (
-    <View style={[styles.container, props.headerContainerStyles]}>
+    <View style={[styles.container, headerContainerStyles]}>
       <View
         style={[
           styles.inner,
-          { backgroundColor: variables[`${props.theme}Background`] },
-          props.headerInnerStyles,
+          { backgroundColor: variables[`${theme}Background`] },
+          headerInnerStyles,
         ]}
       >
-        {!props.headerIconComponent && (
-          <Image source={{ uri: images[props.theme] }} style={styles.image} />
+        {!headerIconComponent && (
+          <Image source={{ uri: images[theme] }} style={styles.image} />
         )}
-        {props.headerIconComponent}
+        {headerIconComponent}
       </View>
     </View>
   )

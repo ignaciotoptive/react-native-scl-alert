@@ -3,17 +3,11 @@ import PropTypes from 'prop-types'
 import { View,  StyleSheet, Text } from 'react-native'
 import variables from '../config/variables'
 
-
-SCLAlertTitle.defaultProps = {
-  titleContainerStyle: {},
-  titleStyle: {}
-}
-
-function SCLAlertTitle(props) {
+function SCLAlertTitle({ title, titleContainerStyle = {}, titleStyle = {}}) {
   return (
-    <View style={[styles.container, props.titleContainerStyle]}>
-      <Text style={[styles.text, props.titleStyle]}>
-        {props.title}
+    <View style={[styles.container, titleContainerStyle]}>
+      <Text style={[styles.text, titleStyle]}>
+        {title}
       </Text>
     </View>
   )

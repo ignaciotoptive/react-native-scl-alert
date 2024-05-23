@@ -4,30 +4,31 @@ import { View,  StyleSheet, Text, TouchableOpacity } from 'react-native'
 import variables from '../config/variables'
 import { themeType, defaultThemeType } from '../config/types'
 
-SCLAlertButton.defaultProps = {
-  containerStyle: {},
-  textStyle: {},
-  theme: defaultThemeType
-}
 
-function SCLAlertButton(props) {
-  const childrenType = typeof props.children
+function SCLAlertButton({
+  containerStyle = {},
+  textStyle = {},
+  theme = defaultThemeType,
+  children,
+  onPress
+}) {
+  const childrenType = typeof children
 
   return (
-    <TouchableOpacity activeOpacity={0.8} onPress={props.onPress}>
+    <TouchableOpacity activeOpacity={0.8} onPress={onPress}>
       <View
         style={[
           styles.container,
-          { backgroundColor: variables[`${props.theme}Background`] },
-          props.containerStyle
+          { backgroundColor: variables[`${theme}Background`] },
+          containerStyle
         ]}
       >
         {childrenType === 'string' && (
-          <Text style={[styles.text, { color: variables[`${props.theme}Color`] }, props.textStyle]}>
-            {props.children}
+          <Text style={[styles.text, { color: variables[`${theme}Color`] }, textStyle]}>
+            {children}
           </Text>
         )}
-        {childrenType === 'object' && <View>{props.children}</View>}
+        {childrenType === 'object' && <View>{children}</View>}
       </View>
     </TouchableOpacity>
   )
