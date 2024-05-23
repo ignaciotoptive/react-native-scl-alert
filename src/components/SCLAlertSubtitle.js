@@ -3,16 +3,11 @@ import PropTypes from 'prop-types'
 import { View,  StyleSheet, Text } from 'react-native'
 import variables from '../config/variables'
 
-SCLAlertSubtitle.defaultProps = {
-  subtitleContainerStyle: {},
-  subtitleStyle: {}
-}
-
-function SCLAlertSubtitle(props) {
+function SCLAlertSubtitle({ subtitle, subtitleContainerStyle = {}, subtitleStyle = {}}) {
   return (
-    <View style={[styles.container, props.subtitleContainerStyle]}>
-      <Text style={[styles.subtitle, props.subtitleStyle]}>
-        {props.subtitle}
+    <View style={[styles.container, subtitleContainerStyle]}>
+      <Text style={[styles.subtitle, subtitleStyle]}>
+        {subtitle}
       </Text>
     </View>
   )
